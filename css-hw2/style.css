@@ -1,1 +1,121 @@
+/* ===== HOMEWORK 2 CSS ===== */
 
+/* 1. Body - font family and font size */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Header - background color */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+}
+
+/* 3. Nav - background color + NEW RULES */
+nav {
+    background-color: #34495e;
+    padding: 10px 20px;
+    display: inline-block;  /* NEW: Makes nav inline-block */
+    width: 80%;             /* NEW: 80% width */
+    margin: 0 auto;         /* Centers the nav */
+    text-align: center;     /* Centers text inside */
+}
+
+/* 4. Main - background color and font size */
+main {
+    background-color: #ecf0f1;
+    font-size: 18px;
+    padding: 20px;
+    min-height: 400px;
+}
+
+/* 5. Footer - background color */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* 6. Li - COMMENTED OUT (OLD STYLING) */
+/*
+li {
+    display: inline-block;
+    width: 150px;
+    margin: 0 10px;
+}
+*/
+
+/* 7. H1 - text align, font family, color */
+h1 {
+    text-align: center;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #2980b9;
+}
+
+/* 8. P - line height */
+p {
+    line-height: 1.8;
+}
+
+/* ===== HOMEWORK 2 NEW RULES ===== */
+
+/* Skip to Main Content Link */
+.skip-link {
+    position: absolute;
+    top: -1000px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000;
+    color: #fff;
+    padding: 10px 20px;
+    z-index: 1000;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+/* Descendent selector: nav image (10% width) */
+nav img {
+    width: 10%;
+    border-radius: 50%; /* Optional: makes it circular */
+}
+
+/* Grid class: 2 columns, ~40% each */
+.grid {
+    display: grid;
+    grid-template-columns: 40% 40%; /* Two columns */
+    gap: 20px;                     /* Space between columns */
+    justify-content: center;       /* Centers the grid */
+    align-items: start;            /* Align items to top */
+    row-gap: 30px;                 /* Space between rows */
+    padding: 20px;
+}
+
+/* Descendent selector: images inside grid (100% width) */
+.grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: rounded corners */
+}
+
+/* Flex class: use flexbox */
+.flex {
+    display: flex;
+    flex-wrap: wrap;          /* Wrap items to next line */
+    justify-content: center;  /* Center items horizontally */
+    gap: 20px;                /* Space between items */
+    padding: 20px;
+}
+
+/* Optional: style flex items */
+.flex > * {
+    flex: 1 1 200px;         /* Grow, shrink, base width */
+    max-width: 300px;
+}
